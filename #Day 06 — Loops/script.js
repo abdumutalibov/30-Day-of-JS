@@ -347,7 +347,7 @@ let n =marr.length
 
 print(marr, n)
 
-
+11
 const webTechs = [
       'HTML',
       'CSS',
@@ -357,4 +357,85 @@ const webTechs = [
       'Node',
       'MongoDB'
     ]
-    for(let )
+    const  emp=[]
+    for(let i =0;i<webTechs.length;i++){
+emp.push(webTechs[i].length)
+    }
+    console.log(emp);
+
+    high = Math.max.apply(null, emp);
+console.log(webTechs[emp.indexOf(high)])
+
+12
+
+let leng=[]
+for(let i=0;i<webTechs.length;i++){
+  leng.push([webTechs[i] ])
+}
+console.log(leng);
+
+13
+let mernStack = ["MongoDb", "Express", "React", "Node"]
+let mern = "";
+for (let i = 0; i < mernStack.length; i++) {
+    mern += mernStack[i].slice(1, 0);
+}
+console.log(mern)
+
+14
+let techs=["HTML", "CSS", "JS", "React", "Redux", "Node", "Express", "MongoDB"]
+for(let i=0;i<techs.length;i++){
+  console.log(techs[i]);
+}
+console.log('<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<-->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>');
+for(let tech of techs){
+  console.log(tech);
+}
+
+
+console.log('<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<15>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>');
+
+15
+let fruts=['banana', 'orange', 'mango', 'lemon'] 
+for(let i=fruts.length;i>0;i--){
+  console.log(fruts[i]);
+}
+
+const fullStack = [
+  ['HTML', 'CSS', 'JS', 'React'],
+  ['Node', 'Express', 'MongoDB']
+]
+
+  
+
+let full=fullStack.join(  )
+console.log(full);
+
+// Exercises: Level 3
+
+
+const sortedCountries= [
+  'Albania',
+  'Bolivia',
+  'Canada',
+  'Denmark',
+  'Ethiopia',
+  'Finland',
+  'Germany',
+  'Hungary',
+  'Ireland',
+  'Japan',
+  'Kenya'
+]
+
+
+const ernStack = [
+  'HTML',
+  'CSS',
+  'JavaScript',
+  'React',
+  'Redux',
+  'Node',
+  'MongoDB'
+]
+console.log(ernStack.sort());
