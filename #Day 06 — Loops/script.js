@@ -252,7 +252,6 @@ const countries = [
   'Ireland',
   'Japan',
   'Kenya',
-  'landshaft and WTF!!'
 ]
 const newArr=[]
 for(let i=0;i<countries.length;i++){
@@ -289,5 +288,73 @@ for (let i=0;i<countries.length;i++){
     withoutLand.push(countries[i])
   }
 }
-console.log(withLand);
-console.log(withoutLand);
+console.log(withLand , 'with + land');
+console.log(withoutLand , 'without - lanf');
+
+8
+const with_ia =[];
+const without_ia=[];
+for(let i=0; i<countries.length;i++){
+if(countries[i].includes('ia')){
+  with_ia.push(countries[i])
+}else{
+  without_ia.push(countries[i])
+}
+}
+console.log(with_ia ,'with "ia"');
+console.log(without_ia ,'without "ia"');
+
+9 
+let countriesCharLength = [];
+for (let i = 0; i < countries.length; i++) {
+    countriesCharLength.push(countries[i].length);
+}
+console.log(countriesCharLength);
+
+
+let highest;
+highestNum = Math.max.apply(null, countriesCharLength);
+console.log(countries[countriesCharLength.indexOf(highestNum)]);
+
+
+10
+let empty=[]
+for(let i=0; i<countries.length;i++){
+  if(countries[i].length<6){
+    empty.push(countries[i])
+  }
+
+}
+console.log(empty);
+
+
+
+
+
+function print(marr, size) {
+  for(let i =0;i<size; i++){
+    let j
+    for(j=i+1; j< size; j++){
+if(marr[i]<marr[j])
+break;
+    }
+    if (j==size)
+    console.log(marr[i] +' ');
+  }
+}
+let marr=countries
+let n =marr.length
+
+print(marr, n)
+
+
+const webTechs = [
+      'HTML',
+      'CSS',
+      'JavaScript',
+      'React',
+      'Redux',
+      'Node',
+      'MongoDB'
+    ]
+    for(let )
