@@ -84,6 +84,8 @@ let full=firstName+lastName
 return full
   }
   console.log(As()); 
+  
+  3
   function addNumbers(){
     let aee= 444;
     let arr=241
@@ -91,3 +93,40 @@ return full
     return qee
   }
   console.log(addNumbers());
+//   4
+//     var length = prompt("Enter a whole number for the length of your rectangle.");
+//     var width = prompt("Enter a whole number for the width of your rectangle.");
+//     function area(length,width){
+// return length*width;
+//     }
+//     function primeter(length,width){
+//       return 2*(length+width)
+
+//     }
+//     alert('The area of your rectangle is ' + area(length, width))
+//     alert('The perimeter of your rectangle is ' + primeter(length, width))
+
+
+    6
+//     function volueOfRectPrism(){
+//      let l= prompt('enter length ')
+//      let w = prompt('enter width')
+//      let h = prompt('enter height ')
+//      let v = l*w*h
+//      return alert(v)
+//     }
+// volueOfRectPrism()
+7
+// function Area(){
+//   let r = prompt('enter radius')
+// let p =3.14
+// let area =p*r*r
+// return alert(area)
+// }
+// Area()
+8
+//  function circle(){
+// let r = prompt('enter circle ')
+// return alert(2*3.14*r)
+// }
+// circle()
