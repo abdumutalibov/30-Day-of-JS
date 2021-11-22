@@ -130,3 +130,14 @@ return full
 // return alert(2*3.14*r)
 // }
 // circle()
+9
+// function density(){
+//   let mass = prompt('entrt your mass ')
+//   let valume = prompt('enter your volume')
+//   let den = mass/ valume
+//   return alert( den )
+
+// }
+// density()
+
+10 
