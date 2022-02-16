@@ -129,10 +129,10 @@
 // // console.log('lenght',c);
 
 9 
-let hours = parseInt(prompt('Enter hours: '));
-let rate =parseInt(prompt('Enter rate per hour: '))
-let earning = hours*rate;
-console.log(`Your weekly earning is:${earning}`);
+// let hours = parseInt(prompt('Enter hours: '));
+// let rate =parseInt(prompt('Enter rate per hour: '))
+// let earning = hours*rate;
+// console.log(`Your weekly earning is:${earning}`);
 
 // function test(name ,age, email ){
 //   name.length<=4 ? console.log('error'):console.log('kelingiz')
@@ -217,11 +217,36 @@ console.log(`Your weekly earning is:${earning}`);
 
 //Exercises: Level 3
 
-let now  =  new Date;
-let year = now.getFullYear()
-const month = now.getMonth() + 1 // return month(0 - 11)
-const date = now.getDate() // return date (1 - 31)
- const hours = now.getHours() // return number (0 - 23)
- const minutes = now.getMinutes() // return number (0 -59)
+// let now  =  new Date;
+// let year = now.getFullYear()
+// const month = now.getMonth() + 1 // return month(0 - 11)
+// const date = now.getDate() // return date (1 - 31)
+//  const hours = now.getHours() // return number (0 - 23)
+//  const minutes = now.getMinutes() // return number (0 -59)
 
- console.log(year,`0${month}:${date}:${hours}:${minutes}`);
+//  console.log(year,`0${month}:${date}:${hours}:${minutes}`);
+
+
+
+// console.log('python'.length !== 'jargon'.length);
+// console.log(!(4<3));
+// console.log(!(false));
+// console.log(!(4 > 3 && 10 < 12));
+// console.log(!(4 > 3 && 10 > 12));
+// console.log(!(4==='4'));
+// const now = new Date()
+// console.log(now.getFullYear());
+// console.log(now.getMonth()+1 ,now.getDate(), now.getHours(),now.getMinutes());
+// const log = new Date()
+// console.log(log.getTime());
+
+// let pro = prompt('enter your age')
+// if(pro >=18){
+//     console.log(`You are ${pro} old enough to drive`);
+// }else {
+//     console.log( `your age ${pro} pro get out of here`);
+// }
+
+let a = 4
+let b = 3
+console.log(a >=b ? '4 is greater than 3' : '3 is greater than 4');

@@ -18,12 +18,13 @@ let itCompanies =['Facebook', 'Google', 'Microsoft', 'Apple', 'IBM', 'Oracle' , 
 // console.log(oo+'h');
 
 // console.log(itCompanies.sort().reverse());
-// console.log(itCompanies.slice(3));
-// console.log(itCompanies.splice(0,4));
+console.log(itCompanies.slice(4));
+console.log(itCompanies.splice(0,4));
 // console.log(itCompanies.slice(3,4));
 // console.log(itCompanies.shift()+6);
-console.log(itCompanies.pop(3));
-console.log(itCompanies.splice());
+// console.log(itCompanies.pop(3));
+// console.log(itCompanies.splice());
 
 
 //Exercise: Level 2
+
