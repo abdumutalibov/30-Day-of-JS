@@ -211,5 +211,33 @@
 
 //  let countries =["ALBANIA", "BOLIVIA", "CANADA", "DENMARK", "ETHIOPIA", "FINLAND", "GERMANY", "HUNGARY", "IRELAND", "JAPAN", "KENYA"]
 // let coun =[]
-console.log(dffd);
-console.log(greg);
+// function with two parameters
+
+   // during calling or invoking two arguments needed
+  // Function without parameter doesn't take input, so lets make a function with parameters
+ // calling functions
+  // If a function doesn't return it doesn't store data, so it should return
+  
+//   function sumTwoNumbers(numOne, numTwo) {
+//     let sum = numOne + numTwo
+//     return sum
+//   }
+  
+//   console.log(sumTwoNumbers(10, 20))
+//   function printFullName(firstName, lastName) {
+//     return `${firstName} ${lastName}`
+//   }
+//   console.log(printFullName('Asabeneh', 'Yetayeh'))
+
+
+function sumAllNums() {
+    let sum = 0
+    for (let i = 0; i < arguments.length; i++) {
+      sum += arguments[i]
+    }
+    return sum
+  }
+  
+  console.log(sumAllNums(1, 2, 3, 4)) // 10
+  console.log(sumAllNums(10, 20, 13, 40, 10))  // 93
+  console.log(sumAllNums(15, 20, 30, 25, 10, 33, 40))  // 173
