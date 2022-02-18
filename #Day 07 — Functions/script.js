@@ -333,10 +333,76 @@ as+=sum[i]
   }
   return as
 }
-console.log(sumOfNumbers(1,2,3,4,5,6,7,8,9));
+console.log(sumOfNumbers(1,2,3));
+
+
+const sumOfOdds=(sum)=>{
+let num = []
+for(const ele of sum){
+  if(ele%2==1){
+    num.push(ele)
+  }
+}
+return num
+}
+console.log(sumOfOdds([23,45,23,68,87,34,85,33,3,6,8,8,423,23]));
+
+
+const evensAndOdds =(a)=>{
+  let num=[]
+for(let i=0;i<a.length;i++){
+  if(a[i]%2==1){
+    num.push(a[i].length)
+  }
+}
+console.log(num);
+return num
+}
+console.log(evensAndOdds([100])); ;
 
 
 
+
+  function cal(arr){
+      let num= 0
+    for(let i=0; i<arr.length;i++){
+      if(arr[i].length%2==1){
+     num+=arr[i].length
+      }
+    }
+    return num
+    }
+    console.log(cal(100));
+
+  let k=0
+for(let i=0;i<=100;i++){
+if(i%2==0){
+  // console.log(k+=[i].length);
+}
+}
+
+const sum =(...n)=>{
+let k=0
+for(let i=0;i<n.length;i++){
+
+  k+=n[i]
+}
+return k
+}
+
+console.log(sum(1, 2, 3));
+
+
+
+const suma =(...m)=>{
+  let p=0
+  for(const ele of m){
+    p+=ele
+  }
+  console.log(p);
+  return p
+}
+suma(1, 2, 3, 4) 
 // const first = [1,2,3,4,]
 // const second = [3,4,5,6]
 // function intersection (a, b){
