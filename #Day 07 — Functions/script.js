@@ -221,42 +221,101 @@
 // }
 // console.log(solveQuadratic()) // {0}
 
-const a =(b)=>{
-  return b-3
-}
-console.log(a(1,4,4,));
+// const a =(b)=>{
+//   return b-3
+// }
+// console.log(a(1,4,4,));
 
-const b =(c ,d)=>{
-  return `${d+4} ${c-2} `
-}
-console.log(b(1,-2,-2));
+// const b =(c ,d)=>{
+//   return `${d+4} ${c-2} `
+// }
+// console.log(b(1,-2,-2));
 
-function solveQuadratic(c ,d){
-return `${d-10} ${c-5}`
-}
+// function solveQuadratic(c ,d){
+// return `${d-10} ${c-5}`
+// }
 
-console.log(solveQuadratic(1, 7, 12)) // {-3, -4}
+// console.log(solveQuadratic(1, 7, 12)) // {-3, -4}
 
-function solveQuadratic(c ,d){
-  return `${d+2} ${c-3}`
-  }
-console.log(solveQuadratic(1, 0, -4)) //{2, -2}
+// function solveQuadratic(c ,d){
+//   return `${d+2} ${c-3}`
+//   }
+// console.log(solveQuadratic(1, 0, -4)) //{2, -2}
 
-function printArray([arr]){
-return arr.length
-}
-console.log(printArray(['calculated ']));
+// function printArray([arr]){
+// return arr.length
+// }
+// console.log(printArray(['calculated ']));
 
-function showDateTime (){
-const now = new Date()
+// function showDateTime (){
+// const now = new Date()
 
-  console.log(`${now.getDate()}/${now.getMonth()+1}/${now.getFullYear()} ${now.getHours()}:${now.getMinutes()}`);
-}
-showDateTime()
+//   console.log(`${now.getDate()}/${now.getMonth()+1}/${now.getFullYear()} ${now.getHours()}:${now.getMinutes()}`);
+// }
+// showDateTime()
 
 function swapValues(x,y){
-return `${x} `
+return (`${x} ${y} `)
 }
 
 swapValues(3, 4) // x => 4, y=>3
 swapValues(4, 5)
+
+function calculateAge(birthYear, currentYear = 2019) {
+  let age = currentYear - birthYear
+  return age
+}
+
+// console.log('Age: ', calculateAge(1819))
+
+
+function reverseArray(rev){
+  let emp = []
+  for(let i=rev.length;i>-1;i--){
+    emp.push(rev[i])
+  }
+  
+  return emp
+}
+
+// console.log(reverseArray([1, 2, 3, 4, 5]))
+
+const reverseArra =(arr)=>{
+  const emp =[]
+  for(let i=arr.length;i>-1;i--){
+    emp.push(arr[i])
+  }
+  return emp
+}
+// console.log(reverseArra(['A', 'B', 'C']))
+// let fruts=[1,2,3,4,5,6,7] 
+// for(let i=fruts.length;i>=0;i--){
+//   console.log(fruts[i]);
+// }
+
+const up =(to)=>{
+  const str=[]
+for(let i=0;i<to.length;i++){
+  str.push(to[i].toUpperCase())
+}
+return str
+}
+// console.log(up(['Finland', 'Sweden', 'Norway', 'Denmark', 'Iceland']));
+
+const addItem =(add)=>{
+  const item =['Apple']
+  for(let i=0;i<add.length;i++){
+    item.push( add[i])
+  }
+return item
+}
+// console.log(addItem(['Finland', 'Sweden', 'Norway', 'Denmark', 'Iceland']));
+
+
+const removeItem =(remov)=>{
+  const item = 'Sweden'
+  remov = remov.filter(e => e !== item)
+  return remov
+}
+
+console.log(removeItem(['Finland', 'Sweden', 'Norway', 'Denmark', 'Iceland'])); 
