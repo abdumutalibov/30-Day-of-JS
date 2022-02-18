@@ -319,3 +319,46 @@ const removeItem =(remov)=>{
 }
 
 console.log(removeItem(['Finland', 'Sweden', 'Norway', 'Denmark', 'Iceland'])); 
+
+
+
+const sumOfNumbers =(...sum)=>{
+
+  let as = 0
+  // for( const ele of sum){
+  //   as+=ele
+  // }
+  for(let i=0;i<sum.length;i++){
+as+=sum[i]
+  }
+  return as
+}
+console.log(sumOfNumbers(1,2,3,4,5,6,7,8,9));
+
+
+
+// const first = [1,2,3,4,]
+// const second = [3,4,5,6]
+// function intersection (a, b){
+//   let r=[]
+//   for(let i=0;i< a.length;i++){
+//     if(a[i]===3){
+//     r.push(a[i] )
+//     }
+//   }
+//   for(let i=0;i< b.length;i++){
+//     if(a[i]===4){
+//     r.push(a[i] )
+//   }
+// }
+// console.log(r);
+
+// return a, b
+// }
+// intersection(first, second)
+
+// for(var i =0;i<10; i++){
+//   setTimeout(function (){
+//     console.log(i);
+//   }, 10)
+// }
