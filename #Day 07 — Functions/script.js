@@ -413,6 +413,19 @@ const randomUserIp = ()=>{
 randomUserIp()
 
 
+const evenAndOdds = (num) => {
+  let odd = 0;
+  let even = 0;
+  for (let i = 0; i <= num; i++) {
+      if (i % 2 === 0) {
+          even++
+      } else if (i % 2 !== 0) {
+          odd++
+      }
+  }
+  return  console.log(`the number of odds are ${odd} \n the number of even are ${even}`);
+}
+evenAndOdds(100)
 const randomMacAddress =(mac)=>{
   let result = ''
   let result1 = ''
@@ -434,17 +447,76 @@ const randomMacAddress =(mac)=>{
 }
 randomMacAddress(1)
 
-function makeid(length) {
-    var result           = '';
-    var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-    var charactersLength = characters.length;
-    for ( var i = 0; i < length; i++ ) {
-      result += characters.charAt(Math.floor(Math.random() * charactersLength));
-   }
-   return result;
+const setBg = () => {
+  const randomColor = Math.floor(Math.random()*16777215).toString(16);
+  console.log(`#${randomColor}`);
 }
 
-console.log(makeid(6));
+setBg();
+
+
+const userIdGenerator =()=>{
+
+  const random = Math.floor(Math.random()* 167772158).toString(16).toUpperCase()
+  console.log(random);
+}
+userIdGenerator()
+
+
+const userIdGeneratedByUser =()=>{
+  let chars ='0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz'
+  let noId = Number(prompt('Enter how many id do you want to genereate'))
+  let noChars = Number(prompt('in how many chars'))
+  let ids = []
+for(let i =0; i<noId; i++){
+  ids[i] = ""
+  for(let k=0;k<noChars;k++){
+    ids[i]+=chars[Math.floor(Math.random()* chars.length)]
+  }
+}
+  console.log(ids);
+  ids.forEach(function (id){
+    console.log(id);
+  })
+}
+userIdGeneratedByUser()
+
+
+
+
+
+
+// const userIdGeneratedByUser = () => {
+//   let chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz";
+//   let noId = Number(prompt("how many id do you want to generate"));
+//   let noChars = Number(prompt("in how many chars"));
+//   let ids = [];
+//   for (i = 0; i < noId; i++) {
+//       ids[i] = "";
+//       for (k = 0; k < noChars; k++) {
+//           ids[i] += chars[Math.floor(Math.random() * chars.length)];
+//       }
+//   }
+//   console.log(ids)
+//   ids.forEach(function (id) {
+//       console.log(id);
+//   })
+// }
+// userIdGeneratedByUser();
+
+
+
+// function makeid(length) {
+//     var result           = '';
+//     var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+//     var charactersLength = characters.length;
+//     for ( var i = 0; i < length; i++ ) {
+//       result += characters.charAt(Math.floor(Math.random() * charactersLength));
+//    }
+//    return result;
+// }
+
+// console.log(makeid(6));
 
 
 // const first = [1,2,3,4,]
