@@ -403,6 +403,50 @@ const suma =(...m)=>{
   return p
 }
 suma(1, 2, 3, 4) 
+
+const randomUserIp = ()=>{
+  var ip = (Math.floor(Math.random() * 255) + 1)+"."+
+  (Math.floor(Math.random() * 255))+"."+(Math.floor(Math.random() * 255)
+  )+"."+(Math.floor(Math.random() * 255));
+  console.log(ip)
+}
+randomUserIp()
+
+
+const randomMacAddress =(mac)=>{
+  let result = ''
+  let result1 = ''
+  let result2 = ''
+  let result3 = ''
+  let result4 = ''
+  let result5 = ''
+  var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0'
+  let charactersLength =characters.length
+  for (let i = 0; i < mac; i++)  result +=characters.charAt(Math.floor(Math.random() * charactersLength))
+  for (let i = 0; i < mac; i++)  result1 +=characters.charAt(Math.floor(Math.random() * charactersLength))
+  for (let i = 0; i < mac; i++)  result2 +=characters.charAt(Math.floor(Math.random() * charactersLength))
+  for (let i = 0; i < mac; i++)  result3 +=characters.charAt(Math.floor(Math.random() * charactersLength))
+  for (let i = 0; i < mac; i++)  result4 +=characters.charAt(Math.floor(Math.random() * charactersLength))
+  for (let i = 0; i < mac; i++)  result5 +=characters.charAt(Math.floor(Math.random() * charactersLength))
+  
+  let random =(Math.floor(Math.random() * 10))+`${result}:`+(Math.floor(Math.random() * 10))+`${result1}:`+(Math.floor(Math.random()*10))+`${result2}:`+(Math.floor(Math.random() * 10))+`${result3}:`+(Math.floor(Math.random() * 10))+`${result4}:`+(Math.floor(Math.random() * 10))+`${result5}:`
+  console.log(random);
+}
+randomMacAddress(1)
+
+function makeid(length) {
+    var result           = '';
+    var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    var charactersLength = characters.length;
+    for ( var i = 0; i < length; i++ ) {
+      result += characters.charAt(Math.floor(Math.random() * charactersLength));
+   }
+   return result;
+}
+
+console.log(makeid(6));
+
+
 // const first = [1,2,3,4,]
 // const second = [3,4,5,6]
 // function intersection (a, b){
