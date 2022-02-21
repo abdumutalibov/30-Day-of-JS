@@ -463,28 +463,47 @@ const userIdGenerator =()=>{
 userIdGenerator()
 
 
-const userIdGeneratedByUser =()=>{
-  let chars ='0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz'
-  let noId = Number(prompt('Enter how many id do you want to genereate'))
-  let noChars = Number(prompt('in how many chars'))
-  let ids = []
-for(let i =0; i<noId; i++){
-  ids[i] = ""
-  for(let k=0;k<noChars;k++){
-    ids[i]+=chars[Math.floor(Math.random()* chars.length)]
-  }
+// const userIdGeneratedByUser =()=>{
+//   let chars ='0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz'
+//   let noId = Number(prompt('Enter how many id do you want to genereate'))
+//   let noChars = Number(prompt('in how many chars'))
+//   let ids = []
+// for(let i =0; i<noId; i++){
+//   ids[i] = ""
+//   for(let k=0;k<noChars;k++){
+//     ids[i]+=chars[Math.floor(Math.random()* chars.length)]
+//   }
+// }
+//   console.log(ids);
+//   ids.forEach(function (id){
+//     console.log(id);
+//   })
+// }
+// userIdGeneratedByUser()
+
+const rgbColorGenerator =()=>{
+  let r1 = Math.floor(Math.random() * 255)
+  let r2 = Math.floor(Math.random() * 255)
+  let r3 = Math.floor(Math.random() * 255)
+  console.log(`rgb(${r1},${r2},${r3},)`);
 }
-  console.log(ids);
-  ids.forEach(function (id){
-    console.log(id);
-  })
+
+rgbColorGenerator()
+
+
+const arrayOfHexaColors =()=>{
+ let chars = "0123456789ABCDEF "
+ let hex =[]
+ for(let i =0; i<3;i++){
+   hex[i]='#'
+   for(let j=0;j<6;j++){
+     hex[i]+= chars[Math.floor(Math.random()* chars.length)]
+   }
+ }
+ console.log(hex);
+ return hex
 }
-userIdGeneratedByUser()
-
-
-
-
-
+arrayOfHexaColors()
 
 // const userIdGeneratedByUser = () => {
 //   let chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz";
