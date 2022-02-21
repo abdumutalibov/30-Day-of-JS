@@ -491,19 +491,72 @@ const rgbColorGenerator =()=>{
 rgbColorGenerator()
 
 
+
 const arrayOfHexaColors =()=>{
- let chars = "0123456789ABCDEF "
- let hex =[]
- for(let i =0; i<3;i++){
-   hex[i]='#'
-   for(let j=0;j<6;j++){
-     hex[i]+= chars[Math.floor(Math.random()* chars.length)]
-   }
- }
- console.log(hex);
- return hex
+  let chars ="0123456789ABCDEF"
+  let hex =[]
+  for(let i=0;i<3;i++){
+    hex[i]='#'
+    for(let j=0;j<6;j++){
+      hex[i]+= chars[Math.floor(Math.random() * chars.length)]
+    }
+  }
+  console.log(hex);
+  return hex
 }
 arrayOfHexaColors()
+
+
+const arrayOfRgbColors =(type,arrLength)=>{
+  let chars ="0123456789ABCDEF"
+  let colors = []
+
+  if(type ==='rgb'){
+    for(let i =0; i<arrLength;i++){
+      colors[i] = 'rgb';
+      colors[i] +=`(${Math.floor(Math.random()* 255)},`
+      colors[i] +=`${Math.floor(Math.random()* 255)},`
+      colors[i] +=`${Math.floor(Math.random()* 255)})`
+      
+    }
+  }
+  else if(type === "hex"){
+    for(let j=0; j< arrLength;j++){
+      colors[j] ='#';
+      for(let k =0;k<6;k++){
+        colors[j]+= chars[Math.floor(Math.random()* chars.length)]
+      }
+    }
+
+  }
+  console.log(colors);
+  return colors
+}
+arrayOfRgbColors('hex',3)
+
+
+
+
+
+
+
+
+
+
+
+// const arrayOfHexaColors =()=>{
+//  let chars = "0123456789ABCDEF "
+//  let hex =[]
+//  for(let i =0; i<3;i++){
+//    hex[i]='#'
+//    for(let j=0;j<6;j++){
+//      hex[i]+= chars[Math.floor(Math.random()* chars.length)]
+//    }
+//  }
+//  console.log(hex);
+//  return hex
+// }
+// arrayOfHexaColors()
 
 // const userIdGeneratedByUser = () => {
 //   let chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz";
