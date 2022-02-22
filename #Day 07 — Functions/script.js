@@ -532,9 +532,20 @@ const arrayOfRgbColors =(type,arrLength)=>{
   console.log(colors);
   return colors
 }
-arrayOfRgbColors('hex',3)
+arrayOfRgbColors('rgb',1)
 
-
+const shuffleArray = (arr) => {
+  let newArr = [];
+  for (let i = 0; i < arr.length; i++) {
+      let rand = Math.floor(Math.random() * arr.length - 1);
+      if (arr.indexOf(rand) !== -1 && !newArr.includes(arr[rand])) {
+          newArr.push(arr[rand]);
+      }
+  }
+  console.log(newArr);
+  return newArr
+}
+shuffleArray([1, 2, 3]);
 
 
 
