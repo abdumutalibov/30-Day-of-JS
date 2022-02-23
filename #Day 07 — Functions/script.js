@@ -537,7 +537,7 @@ arrayOfRgbColors('rgb',1)
 const shuffleArray = (arr) => {
   let newArr = [];
   for (let i = 0; i < arr.length; i++) {
-      let rand = Math.floor(Math.random() * arr.length - 1);
+      let rand = Math.floor(Math.random() * arr.length -1);
       if (arr.indexOf(rand) !== -1 && !newArr.includes(arr[rand])) {
           newArr.push(arr[rand]);
       }
@@ -545,8 +545,134 @@ const shuffleArray = (arr) => {
   console.log(newArr);
   return newArr
 }
+shuffleArray([1, 2, 3,4,5,6,7,8,9,10,11,12,23]);
+
+
+
+
+const array = (type, arraylength)=>{
+  let empty = []
+  let char = '1234567890ABCDEF'
+  if(type =='name1'){
+    for(let i=0;i<arraylength;i++){
+empty[i]='rgb'
+empty[i]+= `(${Math.floor(Math.random() * 255)},`
+empty[i]+= `${Math.floor(Math.random() * 255)},`
+empty[i]+= `${Math.floor(Math.random() * 255)})`
+
+
+    }
+
+  }else if(type = 'name2'){
+    for(let i=0;i<arraylength;i++){
+      empty[i]='#'
+      for(let j=0;j<6;j++){
+        empty[i]+=char[Math.floor(Math.random() * char.length)]
+      }
+    }
+  }
+
+  console.log(empty);
+  return empty
+}
+
+array('name2',2)
+
+
 shuffleArray([1, 2, 3]);
 
+const factorial = (num) => {
+    let factorial = 1;
+    for (let i = num; i > 0; i--) {
+        // if (i === 0) {
+        //     break;
+        // }
+
+        factorial *= i;
+    }
+    console.log(factorial);
+    return factorial;
+}
+factorial(5);
+
+const isEmpty =(val)=>{
+  if(val === undefined){
+    console.log('its empty');
+  }else{
+    console.log('its not empty');
+  }
+}
+isEmpty(5)
+
+const summ =(...args)=>{
+  let summ =0;
+  args.forEach(arg=>{
+    summ += arg
+  })
+  console.log(summ);
+  return summ
+}
+// summ(1,2,3,4,5,1)
+
+
+const sumOfArrayItems = (arr)=>{
+let sum =0
+arr.forEach(function(ar){
+  if (typeof ar === "number") {
+    sum +=ar;
+    sum = arr.length / sum
+  }else{
+    console.log('its string');
+  }
+})
+console.log(sum);
+return sum
+}
+sumOfArrayItems([1,2,3,4,])
+
+
+const average = (arr) => {
+  let sum = 0;
+  arr.forEach(function (ar) {
+      if (typeof ar === "number") {
+          sum += ar;
+          sum = arr.length / sum;
+      } else {
+          sum = `it's a string`;
+      }
+  })
+  console.log(sum);
+  return sum;
+}
+average([1, 2, 3]);
+
+
+const modifyArray =(arr)=>{
+ if(arr.length>=6){
+   for(let i=0;i<arr.length;i++){
+    if(i = 5){
+      arr.splice(5)
+    }
+   }
+   console.log(arr);
+   return arr
+ } else {
+   console.log(arr);
+   return 'its not found'
+ }
+}
+modifyArray([1,2,3,'jhk',4,5,54,5345,543])
+// function getBla(arr) {
+//   const a = arr.map((value)=>{
+//     return value.length
+//   })
+//   arr.forEach(val => {
+//     if (val.length>= Math.max(...a)) {
+//       console.log(val);
+//     }
+//   });
+// }
+// getBla(["Aleksey", "Kartoshka", "Margarita", "Morgenshtern", "Monica"]);
 
 
 
@@ -555,6 +681,16 @@ shuffleArray([1, 2, 3]);
 
 
 
+
+
+// let arr =[1,2,false,'hello', 24,'world',undefined,null,'error',22]
+// for(let i=0;i<arr.length;i++){
+//   emp+=(arr[i])
+//   console.log(typeof arr[i]);
+// }
+
+
+// console.log(is(), 2);
 // const arrayOfHexaColors =()=>{
 //  let chars = "0123456789ABCDEF "
 //  let hex =[]
