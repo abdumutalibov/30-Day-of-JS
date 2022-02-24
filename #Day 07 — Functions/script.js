@@ -662,6 +662,135 @@ const modifyArray =(arr)=>{
  }
 }
 modifyArray([1,2,3,'jhk',4,5,54,5345,543])
+
+
+
+
+
+const modif =(val)=>{
+  if(val.length >=6){
+    for(let i =0;i< val.length;i++){
+      if(i = 5){
+        val.splice(5)
+      }else{
+        console.log('its String');
+      }
+    }
+   }
+   console.log(val);
+   return val
+}
+modif([1,2,3,4,5,6,7])
+
+
+// const isPrime =(num)=>{
+//   for(let i=2;i>num;i++){
+//     if(num % i===0 && num>1){
+//       return `${num} its prime number`
+//     }else{
+//     return('its not prime numbers');
+//   }
+//   }
+
+// }
+// isPrime(5)
+// const isPrime = (num) => {
+//   for (let i = 2; i < num; i++) {
+//       if (num % i === 0 && num > 1) {
+//           return `${num} is a prime number`;
+//       } else {
+//           return `not prime`
+//       }
+//   }
+//   console.log(num);
+//   return num
+// }
+// isPrime(5);
+function* Prime(number) { 
+  const infinit = !number && number !== 0;
+  const re = /^.?$|^(..+?)\1+$/;  
+  let actual = 1;
+ 
+  while (infinit || number-- ) {
+      if(!re.test('1'.repeat(actual)) == true) yield actual;
+      actual++
+  };
+};
+
+let [...primers] = Prime(101); //Example
+console.log(primers);
+
+
+
+function isPrime(num) {
+  var prime = num != 1;
+  for(var i=2; i<num; i++) {
+      if(num % i == 0) {
+          prime = false;
+          break;
+      }
+  }
+  console.log(num);
+  return prime;
+}
+
+function checkUnique(array)
+{ var i,obj={};
+  for(i=0;i<array.length;i++)
+  { if(obj[array[i]])
+      return false;
+    obj[array[i]]=true;
+  }
+  return true;
+}
+console.log(checkUnique([1,2,3,4]));
+console.log(checkUnique([1,2,1,4]));
+
+const isUnique = (arrToTest) => 
+  arrToTest.length === new Set(arrToTest).size
+
+console.log(isUnique([1,1,2,3]));
+console.log(isUnique([1,2,3]));
+
+
+
+const isValidVariable =()=>{
+  var ᾩ = "something";
+  var ĦĔĽĻŎ = "hello";
+  var 〱〱〱〱 = "less than? wtf";
+  var जावास्क्रिप्ट = "javascript"; // ok that's JavaScript in hindi
+  var KingGeorgeⅦ = "Roman numerals, awesome!";
+  return console.log( ᾩ,〱〱〱〱,जावास्क्रिप्ट,KingGeorgeⅦ , ĦĔĽĻŎ  );
+}
+isValidVariable()
+
+
+
+const sevenRandomNumbers =()=>{
+let c =` ${Math.floor(Math.random()*9)},${Math.floor(Math.random()*9)},${Math.floor(Math.random()*9)},${Math.floor(Math.random()*9)},${Math.floor(Math.random()*9)},${Math.floor(Math.random()*9)},${Math.floor(Math.random()*9)}`
+console.log(c);
+}
+sevenRandomNumbers(4)
+
+const reversCountries =()=>{
+let goo = ['Google', 'Facebook','Apple', 'Amazon','MICROSOFT',  'IBM'].reverse()
+return console.log(goo);
+}
+reversCountries()
+// const gen =(hey)=>{
+// let a =0
+// let b =0
+// for(let i=0 ;i<=hey;i++){
+//   if(i%2===0){
+//     a++
+//   }else if(i%2!==0){
+//     b++
+//   }
+// }
+// return console.log(`${a}, ${b}`);
+// }
+
+// gen(100)
 // function getBla(arr) {
 //   const a = arr.map((value)=>{
 //     return value.length
