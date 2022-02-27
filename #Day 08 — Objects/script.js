@@ -114,14 +114,14 @@ console.log(wins.join());
 
 
 const copy = Object.assign({},users)
-console.log(copy.Azimjonnnn === users.Paul);
-
+// console.log(copy.Azimjonnnn === users.Paul);
+// 
 const keys = Object.keys(users)
-console.log(keys);
+// console.log(keys);
 const values = Object.values(users)
-console.log(keys);
+// console.log(keys);
 const entries = Object.entries(users)
-console.log(entries)
+// console.log(entries)
 
 let country ={
   name:'Azim',
@@ -129,7 +129,101 @@ let country ={
   population:'31 billion',
   languages:["Uzb","Rus"]
 }
-console.log(`${country.name}\n${country.capital}\n${country.population}\n${country.languages}`);
+
+
+let personAccount ={
+  firstName: 'Victor',
+  lastName: 'Kenny',
+  income: {
+          freelancing: 10000,
+          menialLabour: 2000
+      },
+      expenses:{
+        data:500,
+        food:1000,
+        transport:500
+      },
+      totalIncome:function(){
+        let  tIncome = 0;
+        let values = Object.values(this.income);
+        for(let i =0;i<values.length;i++){
+          tIncome+=values[i]
+        }
+        
+        return tIncome;
+      },
+      totalExpense:function(){
+        let tExpenses = 0;
+        let values = Object.values(this.expenses);
+        for(let i=0; i<values.length;i++){
+          tExpenses+=values[i]
+        }
+        return tExpenses
+      },
+      accountInfo:function(){
+        return `name ${this.firstName}  lastName ${this.lastName} incomes:${Object.entries(this.income)}
+        expenses:${Object.entries(this.expenses)}
+        `
+      }
+        }
+console.log(personAccount.totalIncome());
+console.log(personAccount.totalExpense());
+console.log(personAccount.accountInfo());
+// let personAccount = {
+//   firstName: "victor",
+//   lastName: "kenneth",
+//   income: {
+//       freelancing: 10000,
+//       menialLabour: 2000
+//   },
+//   expenses: {
+//       data: 500,
+//       food: 1000,
+//       transport: 500
+//   },
+
+//   totalIncome: function () {
+//       let tIncome = 0;
+//       let values = Object.values(this.income);
+//       for (let i = 0; i < values.length; i++) {
+//           tIncome += values[i]
+//       }
+//       return tIncome;
+//   },
+//   totalExpenses: function () {
+//       let tExpenses = 0;
+//       let values = Object.values(this.expenses);
+//       for (let i = 0; i < values.length; i++) {
+//           tExpenses += values[i]
+//       }
+//       return tExpenses
+//   },
+//   accountBalance: function () {
+//       return this.totalIncome() - this.totalExpenses();
+//   },
+//   accountInfo: function () {
+//       return `name:${this.firstName} ${this.lastName}\n
+//               incomes:${Object.entries(this.income)}
+//               expenses: ${
+//                   Object.entries(this.expenses)
+//               }
+//               totalIncome: ${this.totalIncome()}
+//               totalExpenses: ${this.totalExpenses()}
+//               accountBalance: ${this.accountBalance()}
+
+//               `
+
+//   }
+// }
+
+// function callBack(add, a, b) {
+//   return console.log(add(a, b));
+// }
+// console.log(personAccount);
+
+
+
+// console.log(`${country.name}\n${country.capital}\n${country.population}\n${country.languages}`);
 
 // for( let key in users){
 //   if(users.Paul){
