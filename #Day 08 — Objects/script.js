@@ -113,9 +113,8 @@ console.log(wins.join());
 
 
 
-let copy = users
-users.Azimjon=users.Paul
-console.log(copy);
+const copy = Object.assign({},users)
+console.log(copy.Azimjonnnn === users.Paul);
 
 const keys = Object.keys(users)
 console.log(keys);
