@@ -194,10 +194,10 @@
 // console.log(mern);
 
 // 15
-// let fruts=['banana', 'orange', 'mango', 'lemon'] 
-// for(let i=fruts.length;i>=0;i--){
-//   console.log(fruts[i]);
-// }
+let fruts=['banana', 'orange', 'mango', 'lemon'] 
+for(let i=fruts.length;i>=0;i--){
+  console.log(fruts[i]);
+}
 
 // const fullStack = [
 //     ['HTML', 'CSS', 'JS', 'React'],

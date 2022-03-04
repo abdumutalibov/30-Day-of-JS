@@ -65,5 +65,3 @@ users.forEach(user => {
 console.log(users[users.length - 1]);
 }
 signUp()
-signUp()
-signUp()
