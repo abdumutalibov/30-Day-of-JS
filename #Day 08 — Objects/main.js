@@ -40,28 +40,138 @@ const users = [{
 }
 ];
 
+
 const signUp = (username, email, password) => {
-users.forEach(user => {
-    if (user.username === username && user.password === password) {
-        console.log("you already have an account")
-    } else {
-        let date = new Date()
-        let chars = "abcdefghiklmnopqrstuvwxyz";
-        let id = [];
-        for (let i = 0; i < 6; i++) {
-            id.push(chars[Math.floor(Math.random() * chars.length)])
+    users.forEach(user => {
+        if (user.username === username && user.password === password) {
+            console.log("you already have an account")
+        } else {
+            let date = new Date()
+            let chars = "abcdefghiklmnopqrstuvwxyz";
+            let id = [];
+            for (let i = 0; i < 6; i++) {
+                id.push(chars[Math.floor(Math.random() * chars.length)])
+            }
+            id = id.join("");
+            users.push({
+                _id: id,
+                username: username,
+                email: email,
+                password: password,
+                createdAt: `${date.getDate()}/${date.getMonth()}/${date.getFullYear()} ${date.getHours()}:${date.getMinutes()}`,
+                isLoggedIn: "false"
+            })
         }
-        id = id.join("");
-        users.push({
-            _id: id,
-            username: username,
-            email: email,
-            password: password,
-            createdAt: `${date.getDate()}/${date.getMonth()}/${date.getFullYear()} ${date.getHours()}:${date.getMinutes()}`,
-            isLoggedIn: "false"
-        })
-    }
-})
-console.log(users[users.length - 1]);
+    })
+    console.log(users[users.length - 1]);
 }
-signUp()
+
+const signIn = (username, password) => {
+    for (let i = 0; i < users.length; i++) {
+        if (users[i].username === username && users[0].password === password) {
+            return users[i];
+        } else {
+            return "wrong username or password";
+        }
+    }
+    console.log(foundUser)
+}
+signIn()
+
+const products = [{
+    _id: 'eedfcf',
+    name: 'mobile phone',
+    description: 'Huawei Honor',
+    price: 200,
+    ratings: [{
+            userId: 'fg12cy',
+            rate: 5
+        },
+        {
+            userId: 'zwf8md',
+            rate: 4.5
+        }
+    ],
+    likes: []
+},
+{
+    _id: 'aegfal',
+    name: 'Laptop',
+    description: 'MacPro: System Darwin',
+    price: 2500,
+    ratings: [],
+    likes: ['fg12cy']
+},
+{
+    _id: 'hedfcg',
+    name: 'TV',
+    description: 'Smart TV:Procaster',
+    price: 400,
+    ratings: [{
+        userId: 'fg12cy',
+        rate: 5
+    }],
+    likes: ['fg12cy']
+}
+]
+
+const rateProduct = (name, rate) => {
+    products.forEach(product => {
+        if (product.name.toLowerCase().includes(name)) {
+            let chars = "0123456789abcdefghiklmnopqrstuvwxyz";
+            let id = [];
+            for (let i = 0; i < 6; i++) {
+                id.push(chars[Math.floor(Math.random() * chars.length)])
+            }
+            id = id.join("");
+            product.ratings.push({
+                userId: id,
+                rate: rate
+            })
+            console.log("filter");
+        } else {
+            console.log("no product to rate")
+        }
+    })
+};
+
+const avgRating = (name) => {
+    let avg = 0;
+    let count = 0;
+    for (let i = 0; i < products.length; i++) {
+        if (name.toLowerCase() === products[i].name.toLowerCase()) {
+            products[i].ratings.rate.forEach(rating => {
+                count++
+                avg += rating
+            })
+        }
+    }
+    avg = avg / count
+}
+
+const likeProduct = (name) => {
+    for (let i = 0; i < products.length; i++) {
+        if (name.toLowerCase() === products[i].name.toLowerCase()) {
+
+            if (!products[i].likes) {
+                console.log(like);
+                let chars = "0123456789abcdefghiklmnopqrstuvwxyz";
+                let id = [];
+                for (let i = 0; i < 6; i++) {
+                    id.push(chars[Math.floor(Math.random() * chars.length)])
+                }
+                id = id.join("");
+                products[i].likes.push(id)
+            } else {
+                console.log("product has been liked")
+            }
+        } else {
+            console.log("no product available")
+        }
+    }
+}
+
+rateProduct("tv", "4.5");
+avgRating("mobile phone");
+likeProduct("mobile phone");
+likeProduct("mobile phone");
