@@ -174,4 +174,3 @@ const likeProduct = (name) => {
 rateProduct("tv", "4.5");
 avgRating("mobile phone");
 likeProduct("mobile phone");
-likeProduct("mobile phone");
