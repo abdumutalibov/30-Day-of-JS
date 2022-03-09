@@ -196,3 +196,87 @@ const products = [
   { product: 'coffee', price: 10 },
   { product: 'tea', price: '' },
 ]
+
+
+const con = countries.forEach((e,i,a,t)=>{
+  return console.log(e,i,a,t)
+})
+const name1=names.forEach((e)=>{
+  return console.log(e);
+})
+const num=numbers.forEach((e)=>{
+  return console.log(e);
+})
+
+const k=countries.map((e)=>{
+ return console.log(e.toUpperCase());
+})
+const l=countries.map((e)=>{
+  // return console.log(e.length);
+})
+const n = numbers.map((e)=>{
+  return e*2;
+})
+console.log(n);
+const d=names.map((e)=> {
+  return e.toUpperCase()
+})
+console.log(d);
+
+const o=products.map((e)=>{
+  return e
+})
+console.log(o);
+
+const f = countries.filter((e)=>{
+  return e.includes('land')
+})
+console.log(f);
+// const set = new Set(['1','0','3','4','0','5'])
+// console.log([...set]);
+
+// var arr = ["Есть", "жизнь", "на", "Марсе"];
+
+// var arrLength =arr.map((name,index,arr)=>{
+// return name.length 
+// })
+
+// console.log( arrLength );
+
+// const arr = [ 1, 2, 3, 4, 5 ];
+
+// const getSums = (arr) => {
+// return arr.reduce((acc, item, index, array) => {
+// if (index === 0) {
+// acc.push(item);
+// } else {
+// acc.push(item + acc[index - 1]);
+// }
+
+// return acc;
+// }, []);
+// }
+// for (var i = 0; i < arr.length; i++) {
+//   arrLength[i] = arr[i].length;
+// }
+
+// const arr =[1,1,2,3,4,5,4,5,6,6,7,8,7,9]
+
+// function withoutRepeat(array){
+//   const uniqueValue = [];
+
+//   for(let i=0; i<array.length; i++){
+//     const currentItem = array[i];
+//     let count = 0;
+//     for(let j=0;j<array.length; j++){
+//       if(currentItem === array[j]){
+//         count++;
+//       }
+//     }
+//     if (count ===1) {
+//       uniqueValue.push(currentItem)
+//     }
+//   }
+//   return uniqueValue;
+// }
+// console.log(withoutRepeat(arr));
