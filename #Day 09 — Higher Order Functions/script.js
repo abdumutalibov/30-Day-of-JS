@@ -244,9 +244,87 @@ const w = countries.filter((e)=>e.startsWith('f'))
 console.log(w);
 
 const r = products .filter((e)=>{
-  return e.price!==''
+  return e.price>0
 })
 console.log(r);
+let countriesStartingWithE = countries.filter(country => {
+  return country[0].toLowerCase === "e";
+})
+console.log(countriesStartingWithE);
+
+let pricesWithValues = products.filter(product => {
+  return product.price > 0;
+})
+console.log(pricesWithValues);
+
+const getStringList =(arr)=>{
+  let nn =arr.filter(item =>{
+    return typeof item === 'string'
+  })
+  return nn
+}
+let nn = getStringList(["victor", 3, 5, "kenneth"]);
+console.log(nn);
+
+const mn = numbers.reduce((total,item)=>{
+return total+item
+},0)
+console.log(mn);
+const hh = countries.reduce((total, item)=>{
+  return (`${total},${item}`)
+})
+console.log(hh);
+
+const ss = names.some((e)=>{
+  return e.length>7
+})
+console.log(ss);
+
+const yy = countries.every((e)=>{
+  return e.toLocaleLowerCase().includes('land')
+})
+const ff = countries.find((e)=>{
+  return e.length==6
+})
+console.log(ff);
+
+const fff = countries.findIndex((e)=>{
+  return e.length==6
+})
+console.log(fff);
+const fi=countries.findIndex((e)=>{
+  return e.includes('Norway')
+})
+console.log(fi);
+
+const fia=countries.findIndex((e)=>{
+  return e.includes('Russia')
+})
+console.log(fia);
+// function getDivisorsCnt(n){
+//   var divisors = 0;
+//  mod = n;
+//  while(mod>0){
+//    if(n % mod === 0){
+//      divisors++;
+//    }
+//    mod--;
+//   }
+//   console.log(divisors);
+//   return divisors;
+// }
+// getDivisorsCnt(10)
+
+
+// function getDivisorsCnt(n) {
+//   for (var d = 0, i = n; i > 0; i--) {
+//     if (n % i == 0) d++;
+//     console.log(d);
+//   }
+//   console.log(d);
+//   return d;
+// }
+// getDivisorsCnt(10)
 // const set = new Set(['1','0','3','4','0','5'])
 // console.log([...set]);
 
