@@ -191,7 +191,7 @@ const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 const products = [
   { product: 'banana', price: 3 },
   { product: 'mango', price: 6 },
-  { product: 'potato', price: ' ' },
+  { product: 'potato', price: '' },
   { product: 'avocado', price: 8 },
   { product: 'coffee', price: 10 },
   { product: 'tea', price: '' },
@@ -232,6 +232,21 @@ const f = countries.filter((e)=>{
   return e.includes('land')
 })
 console.log(f);
+const m=countries.filter((e)=>{
+  return e.length <=6
+})
+console.log(m);
+
+const q =countries.filter((e)=>e.length > 6)
+console.log(q);
+
+const w = countries.filter((e)=>e.startsWith('f'))
+console.log(w);
+
+const r = products .filter((e)=>{
+  return e.price!==''
+})
+console.log(r);
 // const set = new Set(['1','0','3','4','0','5'])
 // console.log([...set]);
 
