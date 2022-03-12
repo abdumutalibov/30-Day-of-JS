@@ -373,3 +373,11 @@ console.log(fia);
 //   return uniqueValue;
 // }
 // console.log(withoutRepeat(arr));
+const price =products.map(p=>{
+  return p.price
+}).filter(f=>{
+  return f>0
+}).reduce((total, item)=>{
+return total+item
+},0)
+console.log(price);
