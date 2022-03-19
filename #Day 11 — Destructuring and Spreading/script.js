@@ -244,8 +244,8 @@ if(skills.length <=2){
   let mm = new Set(students)
   console.log(mm);
 
-  const convertArrayToObject = (arr) => {
-    let { name, skills, scores } = arr;
+  const convertArrayToObject =arr => {
+    let { name='Hi', skills, scores } = arr; 
   }
   console.log(convertArrayToObject(students));
     // new Promise((resolve, reject)=>{
@@ -255,3 +255,8 @@ if(skills.length <=2){
     // })
     // .then(data => console.log(data))
     // .catch(error => console.log(error))
+   
+    let a = new Array();
+    a['key']='value';
+    console.log(a.length);
+    
