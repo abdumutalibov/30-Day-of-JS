@@ -78,35 +78,35 @@
 // }
 // console.log(string);
 
-5
-for(let i=0;i<=10;i++){
-    // console.log(`${i}*${i}=${i*i} `);
-}
-6
-for(let i=0;i<=10;i++){
-  // console.log(`${i} ${i**2} ${i**3}`);
-}
-7
-for(let i=0; i<=100;i++){
-  if(i%2==0){
-    // console.log(i);
-  }
-}
-for(let i=0; i<=100;i++){
-  if(i%2==0){
-    // console.log(i);
-  }
-}
-function isPrime(num) {
-  if(num < 2) return false;
+// 5
+// for(let i=0;i<=10;i++){
+//     // console.log(`${i}*${i}=${i*i} `);
+// }
+// 6
+// for(let i=0;i<=10;i++){
+//   // console.log(`${i} ${i**2} ${i**3}`);
+// }
+// 7
+// for(let i=0; i<=100;i++){
+//   if(i%2==0){
+//     // console.log(i);
+//   }
+// }
+// for(let i=0; i<=100;i++){
+//   if(i%2==0){
+//     // console.log(i);
+//   }
+// }
+// function isPrime(num) {
+//   if(num < 2) return false;
 
-  for (let k = 2; k < num; k++){
-    if( num % k == 0){
-      return false;
-    }
-  }
-  return true;
-}
+//   for (let k = 2; k < num; k++){
+//     if( num % k == 0){
+//       return false;
+//     }
+//   }
+//   return true;
+// }
 // program to print prime numbers between the two numbers
 
 // take input from the user
@@ -116,23 +116,23 @@ function isPrime(num) {
 // console.log(`The prime numbers between ${lowerNumber} and ${higherNumber} are:`);
 
 // looping from lowerNumber to higherNumber
-for (let i = 2; i <= 100; i++) {
-    let flag = 0;
+// for (let i = 2; i <= 100; i++) {
+//     let flag = 0;
 
-    // looping through 2 to user input number
-    for (let j = 2; j < i; j++) {
-        if (i % j == 0) {
-            flag = 1;
-            break;
-        }
-    }
+//     // looping through 2 to user input number
+//     for (let j = 2; j < i; j++) {
+//         if (i % j == 0) {
+//             flag = 1;
+//             break;
+//         }
+//     }
 
-    // if number greater than 1 and not divisible by other numbers
-    if (i > 1 && flag == 0) {
-        // console.log(i);
-    }
-}
-8
+//     // if number greater than 1 and not divisible by other numbers
+//     if (i > 1 && flag == 0) {
+//         // console.log(i);
+//     }
+// }
+// 8
 // let sum=0;
 // for(let i=0;i<=100;i++){
  
@@ -144,41 +144,41 @@ for (let i = 2; i <= 100; i++) {
 // }
  
 // console.log(sum);
-11
-let sum =0
-for(let i=0;i<=100;i++){
-  console.log(i);
+// 11
+// let sum =0
+// for(let i=0;i<=100;i++){
+//   console.log(i);
    
-   sum+=i
-  }
+//    sum+=i
+//   }
 
-// console.log(sum);
-let som =0
-const arr = []
-let sum3 = 0
-for (let i=1; i<=100; i++) {
+// // console.log(sum);
+// let som =0
+// const arr = []
+// let sum3 = 0
+// for (let i=1; i<=100; i++) {
  
-    if (i%2==1){
-        sum3 +=i
+//     if (i%2==1){
+//         sum3 +=i
         
-    }
+//     }
     
    
-  } 
-   for(let j=1;j<=100;j++){
-      if(j%2==0){
-        som+=j
-      }
+//   } 
+//    for(let j=1;j<=100;j++){
+//       if(j%2==0){
+//         som+=j
+//       }
       
-    }
-  console.log([som , sum3]);
-arr.push(sum3,som)
-console.log(arr,'yyy');
-console.log([Math.round(Math.random()*10),
-    Math.round(Math.random()*10),
-    Math.round(Math.random()*10),
-    Math.round(Math.random()*10),
-    Math.round(Math.random()*10)]);
+//     }
+//   console.log([som , sum3]);
+// arr.push(sum3,som)
+// console.log(arr,'yyy');
+// console.log([Math.round(Math.random()*10),
+//     Math.round(Math.random()*10),
+//     Math.round(Math.random()*10),
+//     Math.round(Math.random()*10),
+//     Math.round(Math.random()*10)]);
     
     // var arr3 = []
     // while(arr3.length < 8){
@@ -190,35 +190,35 @@ console.log([Math.round(Math.random()*10),
 
     // Exercises: Level 2
 
-    function makeid(length){
-      var result ='';
-      var characters ='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-      var charactersLength = characters.length;
-      for(var i =0;i<length;i++){
-        result+=characters.charAt(Math.floor(Math.random()* charactersLength))
-      }
-      return result
-    }
-    console.log(makeid(60));
+//     function makeid(length){
+//       var result ='';
+//       var characters ='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+//       var charactersLength = characters.length;
+//       for(var i =0;i<length;i++){
+//         result+=characters.charAt(Math.floor(Math.random()* charactersLength))
+//       }
+//       return result
+//     }
+//     console.log(makeid(60));
 
-function make(len){
-  var tek ='';
-  var tekst='qwertyuooplkjjhgffsazcvb26547568';
-  var tekstLength=tekst.length
-  for(let i=0;i<len;i++){
-    tek+=tekst.charAt(Math.floor(Math.random()*tekstLength))
-  }
-  return tek
-}
-console.log(make(50));
+// function make(len){
+//   var tek ='';
+//   var tekst='qwertyuooplkjjhgffsazcvb26547568';
+//   var tekstLength=tekst.length
+//   for(let i=0;i<len;i++){
+//     tek+=tekst.charAt(Math.floor(Math.random()*tekstLength))
+//   }
+//   return tek
+// }
+// console.log(make(50));
 
-2
-const random =()=>{
-  let n =(Math.random()* 0xfff * 1000000).toString()
-  return '#'+ n.slice(0,9);
+// 2
+// const random =()=>{
+//   let n =(Math.random()* 0xfff * 1000000).toString()
+//   return '#'+ n.slice(0,9);
 
-}
-console.log(random());
+// }
+// console.log(random());
 
 3
 
