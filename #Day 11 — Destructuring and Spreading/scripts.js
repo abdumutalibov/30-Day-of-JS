@@ -259,4 +259,9 @@ if(skills.length <=2){
     let a = new Array();
     a['key']='value';
     console.log(a.length);
-    
+    const obj ={
+      a:5,
+      b:'string'
+    }
+    console.log(obj.hasOwnProperty('a'));
+    console.log('a' in obj);
