@@ -186,7 +186,7 @@ console.log(personAccount.accountBalance() );
 
 
 
-const users = [
+const user = [
   {
       _id: 'ab12ex',
       username: 'Alex',
