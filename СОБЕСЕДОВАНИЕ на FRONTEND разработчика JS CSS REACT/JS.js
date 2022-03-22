@@ -206,7 +206,7 @@ a:{
 }
 const copys = JSON.parse(JSON.stringify(obj))
 console.log(copys.a === obbj.a); // false
-
+//--------------------------------------------------------------------------
 15
 // Как поменять контекст функции
 
@@ -219,6 +219,59 @@ console.log(copys.a === obbj.a); // false
  
  fn.call(objj, 'arg1', 'arg2') // return {name: ''ULBI TV'}
  fn.apply(objj, ['arg1', 'arg2']) // return {name: ''ULBI TV'}
-
+console.log( fn.call(objj, 'arg1', 'arg2'));
+console.log( fn.apply(objj, ['arg1', 'arg2']));
 // const json =require('./j.json')
 // console.log(json)
+
+
+//------------------------------------------------------------
+16
+// Что такое деструктуризация ?
+
+let aarr = ["UlBi", "TV"]
+// записывает firstName=UlBI, surname= aarr[TV]
+let [firstName,surname]= aarr;
+console.log(aarr);
+
+// Пример деструктуризации объекта
+let options ={
+    title: 'Menu',
+    width: 100,
+    height: 200
+};
+let {title, width, height} = options;
+console.log(width);
+//-------------------------------------------------------------
+17
+// Какие способы работы с ассинхронным кодом вы знаете ?
+
+// 1 Callback - функция обратного вызова
+
+function loadScript(src, callback){
+    let script = document.createElement('script');
+    script.src = src;
+    script.onload = () => callback(script);
+    document.head.append(script);
+}
+// 2 Спосб Промисы
+
+new Promise((resolve, reject)=> {
+    setTimeout(()=>{
+        resolve('data')
+    }, 1000)
+})
+.then(data => console.log(data)) // выполнится в случае выполнения resolve
+.catch(error => console.log(error)) // выполнится в случае выполнения reject
+
+// 3 Спосб Async\await
+
+async function fetchTodos(url){
+    const resp = await fetch(url)
+    const json = await resp.json()
+    console.log(json); // ассинхронный код будет выполняться последовательно
+}
+
+// ------------------------------------------------------------------
+
+18
