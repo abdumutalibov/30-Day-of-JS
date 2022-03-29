@@ -248,6 +248,13 @@ if(skills.length <=2){
     let { name='Hi', skills, scores } = arr; 
   }
   console.log(convertArrayToObject(students));
+
+
+
+  const student = ['David', ['HTM', 'CSS', 'JS', 'React'], [98, 85, 90, 95]]
+  console.log(name, skills, reactScore)
+
+  
     // new Promise((resolve, reject)=>{
     //   setTimeout(()=>{
     //     resolve('Gotovo')
@@ -256,12 +263,9 @@ if(skills.length <=2){
     // .then(data => console.log(data))
     // .catch(error => console.log(error))
    
-    let a = new Array();
-    a['key']='value';
-    console.log(a.length);
-    const obj ={
-      a:5,
-      b:'string'
-    }
-    console.log(obj.hasOwnProperty('a'));
-    console.log('a' in obj);
+    // var url = "https://developer.mozilla.org/en-US/Web/JavaScript";
+
+    // var parsedURL = /^(\w+)\:\/\/([^\/]+)\/(.*)$/.exec(url);
+    // var [, protocol, fullhost, fullpath] = parsedURL;
+    
+    // console.log(protocol); 

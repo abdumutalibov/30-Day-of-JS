@@ -26,8 +26,8 @@
 
 // const user ={
 //     firstName:'Asabeneh',
-//     age:250,
 //     skills:['HTML', 'CSS', 'JS', 'React']
+//     age:250,
 // }
 // const userText = JSON.stringify(user, undefined,4)
 // localStorage.setItem('user',userText)
@@ -51,8 +51,8 @@ let profile ={
 
 }
 // let txt = JSON.stringify(profile);
-// localStorage.setItem('user',txt)
 // console.log(localStorage);
+// localStorage.setItem('user',txt)
 // console.log(localStorage.clear());
 
 const student = {
@@ -74,4 +74,5 @@ const personAccount={
     skills:['HTML', 'CSS', 'JS', 'React'],
     countr:'Qibray',
     incomes: '3000🏦'
+
 }

@@ -572,11 +572,11 @@ empty[i]+= `${Math.floor(Math.random() * 255)})`
     }
   }
 
-  console.log(empty);
+  console.log(empty,'hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhheee');
   return empty
 }
 
-array('name2',2)
+array('name2',4)
 
 
 shuffleArray([1, 2, 3]);
@@ -718,7 +718,7 @@ function* Prime(number) {
 };
 
 let [...primers] = Prime(101); //Example
-console.log(primers);
+console.log(primers, 'здесс');
 
 
 

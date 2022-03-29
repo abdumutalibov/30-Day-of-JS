@@ -20,6 +20,7 @@ let sortingPoint = text.match(/\d+/g);
 sortingPoint = sortingPoint.map((elements) => {
     return Number(elements)
 })
+console.log(Math.max(...sortingPoint));
 const distBtwTwoPart = (arr) => {
     let distBtw = arr[arr.length - 1] - arr[0]
     return distBtw
@@ -60,14 +61,31 @@ for(let word of occurances){
 
 }
 
-console.log(occurances);
+// console.log(occurances);
 }
 console.log(tenMostFrequentWords(paragraph,10))
 
 
+
+
 // Exercises: Level 3
 
+let sentence = `%I $am@% a %tea@cher%, &and& I lo%#ve %tea@ching%;. There $is nothing; &as& mo@re rewarding as educa@ting &and& @emp%o@wering peo@ple. ;I found tea@ching m%o@re interesting tha@n any other %jo@bs. %Do@es thi%s mo@tivate yo@u to be a tea@cher!?`
+const cleanText =(arr)=>{
+    let res = arr.match(/\w+/gi)
+    empty =[]
+    for(let word of res){
+if(empty[word]){
+empty[word]++
+}else if(empty[word]=1){
+    empty[word]=1
+}
+    }
+   
 
+  console.log(empty);
+}
+console.log(cleanText(sentence))
 
     // const naames = ['Asabeneh', 'Mathias', 'Elias', 'Brook']
 
